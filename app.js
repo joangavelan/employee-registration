@@ -62,9 +62,9 @@ const App = (() => {
                 for(let input of INPUTS) {
                     inputValues.push(input.value);
                 }
-                //instantiation of new employee using the array of form input values
+                //instantiation of new employee using the array of input values
                 const newEmployee = new Employee(inputValues);
-                //appending new employee's card to cards section
+                //appending new employee's card
                 appendCard(newEmployee);
                 //clear form fields
                 clearFields();
@@ -74,7 +74,7 @@ const App = (() => {
             else feedbackMessage('alert', 'Please feel in the fields');
         })
         
-        //close feedback message - class reset (it is set to display-none by default)
+        //close feedback message - class reset (it is set to display:none by default)
         FEEDBACK_MESSAGE.querySelector('.close').addEventListener('click', () => FEEDBACK_MESSAGE.className = 'feedback-message');
     }
     
