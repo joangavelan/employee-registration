@@ -71,7 +71,7 @@ const App = (() => {
             }
             //if there are empty inputs we display alert feedbacks
             else if(emptyInputs.length === 1) feedbackMessage('alert', `Please fill in your ${emptyInputs[0]}`);
-            else feedbackMessage('alert', 'Please feel in the fields');
+            else feedbackMessage('alert', 'Please fill in the fields');
         })
         
         //close feedback message - class reset (it is set to display:none by default)
