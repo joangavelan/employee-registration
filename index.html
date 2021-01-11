@@ -5,10 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Employee registration</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="/global-styles.css">
+  <script src="https://kit.fontawesome.com/542ea1a396.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  
-  <h1 class="title c-blue-dark">Employee registration</h1>
+    <header class="registration">
+      <div class="form-container">
+        <!-- heading -->
+        <div class="heading">
+          <h1>Employee registration</h1>
+          <p>Welcome to our company! Please register your data in the following form</p>
+        </div>
+        <!-- feedback messages -->
+        <div class="feedback-message">
+          <p class="message"></p>
+          <a href="#employee-cards">View my card profile</a>
+          <i class="fas fa-times close"></i>
+        </div>
+
+        <!-- form -->
+        <form class="form">
+          <!-- fields -->
+          <!-- name -->
+          <div class="form-field names">
+            <input type="text" class="input" id="first-name" placeholder="First name" pattern="[a-zA-Z]{2,}">
+            <input type="text" class="input" id="last-name" placeholder="Last name" pattern="[a-zA-Z]{2,}">
+          </div>
+          <!-- age -->
+          <div class="form-field">
+            <input type="text"class="input"  id="job-position" placeholder="Job position" pattern="[a-zA-Z ]{2,}">
+          </div>
+          <!-- gender -->
+          <div class="form-field">
+            <input type="number"class="input" id="age" min="18" max="55" placeholder="Age" onkeydown="if(event.key==='.'){event.preventDefault();}">
+          </div>
+          <!-- position -->
+          <div class="form-field">
+            <select id="gender" class="input" >
+              <option value="" selected disabled>Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+          <!-- location -->
+          <div class="form-field">
+            <input type="text" class="input" id="location" placeholder="Location" pattern="[a-zA-Z ]{2,}">
+          </div>
+          <!-- submit -->
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </header>
+
+    <!-- employee cards -->
+    <section class="employee-cards" id="employee-cards">
+      <div class="heading">
+        <h2>Registered Employees</h2>
+      </div>
+      <!-- cards container -->
+      <div class="cards">
+        <!-- card -->
+        <div class="card">
+          <img src="avatars/male-1.jpg" class="card-picture">
+          <div class="card-data">
+            <h3 class="card-name">John Smith</h3>
+            <p>Software Engineer</p>
+            <p>35 years old</p>
+            <p><i class="fas fa-map-marker-alt"></i> Based in Berlin</p>
+          </div>
+        </div>
+        <!-- card -->
+        <div class="card">
+          <img src="avatars/female-1.jpg" class="card-picture">
+          <div class="card-data">
+            <h3>Mary Stewart</h3>
+            <p>Sales Assistant</p>
+            <p>27 years old</p>
+            <p><i class="fas fa-map-marker-alt"></i> Based in San Francisco</p>
+          </div>
+        </div>
+       
+        <!-- end of cards container -->
+        </div>
+    </section>
+    <script src="app.js"></script>
 </body>
 </html>
