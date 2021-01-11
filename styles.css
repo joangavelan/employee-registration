@@ -99,11 +99,11 @@ body {
     background-color: rgb(240, 74, 74);
 }
 
-.feedback-message.alert .close {
+.feedback-message.alert .close-icon {
     color: rgb(78, 8, 8);
 }
 
-.close {
+.close-icon {
     position: absolute;
     top: 7px;
     right: 10px;

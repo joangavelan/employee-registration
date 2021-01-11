@@ -75,7 +75,7 @@ const App = (() => {
         })
         
         //close feedback message - class reset (it is set to display:none by default)
-        FEEDBACK_MESSAGE.querySelector('.close').addEventListener('click', () => FEEDBACK_MESSAGE.className = 'feedback-message');
+        FEEDBACK_MESSAGE.querySelector('.close-icon').addEventListener('click', () => FEEDBACK_MESSAGE.className = 'feedback-message');
     }
     
 
