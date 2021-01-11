@@ -24,7 +24,7 @@ const App = (() => {
     
     const appendCard = (obj) => {
         let card = document.createElement('div');
-        card.classList = 'card';
+        card.className = 'card';
         card.innerHTML = `
                 <img src="avatars/${obj.gender}-${ran()}.jpg" class="card-picture">
                 <div class="card-data">
